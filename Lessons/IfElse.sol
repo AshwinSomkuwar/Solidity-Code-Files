@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^ 0.7.0;
+pragma solidity ^ 0.8.17;
 
 contract IfElse {
     uint oranges = 5;
@@ -8,6 +8,7 @@ contract IfElse {
         if (oranges == 5) {
             return true;
         }
+        return false;
     }
 
     uint stakingWallet = 4;

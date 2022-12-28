@@ -2,7 +2,7 @@
 pragma solidity = 0.8.17;
 
 // like abstract contract we cannot deploy interfaces
-// interfaces are like protocols, 
+// interfaces are like protocols
 
 interface IHelloWorld {
     function getValue() external view returns (uint);
