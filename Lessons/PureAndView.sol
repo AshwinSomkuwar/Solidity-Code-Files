@@ -4,11 +4,12 @@ pragma solidity = 0.8.17;
 contract PureAndViewExample {
     uint public value = 0;
 
-    // here we are just the data from the state variable or blockchain, we are not modifying the data
+    // here we are just reading the data from the state variable or blockchain, we are not modifying the data
     function viewData() public view returns (uint) {
         return value;
     }
 
+    // here we are neither reading the data, nor modifying the data
     function pureData(uint x, uint y) public pure returns (uint) {
         return x + y;
     }
