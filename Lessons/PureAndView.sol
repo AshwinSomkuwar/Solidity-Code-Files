@@ -13,8 +13,6 @@ contract PureAndViewExample {
     function pureData(uint x, uint y) public pure returns (uint) {
         return x + y;
     }
-
-
 }
 
 contract PureAndView {
