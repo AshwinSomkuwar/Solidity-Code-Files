@@ -16,6 +16,8 @@ contract FallbackReceive {
     }
  
     function getBalance() public view returns (uint) {
+        // this means the address of the contract which is calling the function
+        // this means current contract
         return address(this).balance;
     }
 }
@@ -41,6 +43,7 @@ contract ReceiveAndFallback {
 
     // in order to receive Ether transfer, the contract should have either 'receive'
     // or payable 'fallback' function
+
     receive() external payable {
 
         // to update lastValueSent and lastFuncCalled
@@ -52,8 +55,25 @@ contract ReceiveAndFallback {
         lastValueSent = msg.value;
         lastFuncCalled = "fallback";
     }
+
     // if we are transacting ethers then it will be done by receive function by default
     // data is sent by fallback function 
     // if we don't have receive function then the ethers will be sent by fallback function
 
+}
+
+// by Andrei Dumitrescu
+contract Deposit {
+    // receive cannot have arguments, cannot return anything, must have external visibility and payable state mutability 
+    receive() external payable {
+
+    }
+
+    fallback() external payable {
+
+    }
+
+    function getBalance() public view returns (uint) {
+        return address(this).balance;
+    }
 }
