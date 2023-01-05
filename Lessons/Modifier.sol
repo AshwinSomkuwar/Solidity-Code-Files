@@ -69,3 +69,28 @@ contract ModifierFunction {
         count += 20;
     }
 }
+
+contract ModifiersProperty {
+    uint public price;
+    address public owner;
+
+    constructor() {
+        price = 0;
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(owner == msg.sender, "You are not the Owner...");
+        _; 
+    }
+
+    function changeOwner(address _newOwner) public onlyOwner {
+        // require(owner == msg.sender);
+        owner = _newOwner;
+    }
+
+    function changePrice(uint _newPrice) public onlyOwner {
+        // require(msg.sender == owner);
+        price = _newPrice;
+    }
+}
