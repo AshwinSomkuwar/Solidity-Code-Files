@@ -44,6 +44,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "cancelAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "endBlock",
 				"outputs": [
 					{
@@ -53,6 +60,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "finalizeAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -109,6 +123,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "placeBid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "startBlock",
 				"outputs": [
 					{
@@ -149,11 +170,11 @@
 	},
 	"sources": {
 		"Project-Auction/Auction.sol": {
-			"keccak256": "0x5325975a6343096218c3cf00bb49207dafac092cabde07c4bbe0c45fac3885cf",
+			"keccak256": "0xbb803a761a43cc291a5e0fb721abf6c19f816abef6aedad80ac2d0bb8d9797c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cbf9b3947820086491354e4cab79e66c5d2c32a3c7a9a73e722e082feb736d82",
-				"dweb:/ipfs/QmTxZSK3WCTPg6bhN4mjoH9Hn5gG9tjtg5v2VfkiSdHoTT"
+				"bzz-raw://01aaa225780d4d740f972ee54cb1bb9e4131a313cf22186bd497cef78eb6d14b",
+				"dweb:/ipfs/QmNx199GgJozoqyHcjoarLAge6xuJa8WQqrsUVkLtwLaJa"
 			]
 		}
 	},
