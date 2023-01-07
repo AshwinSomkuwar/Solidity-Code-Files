@@ -51,3 +51,33 @@ contract Client1 {
         return targetMathematics.getSquare(inputValue);
     }
 }
+
+
+
+// Interfaces by Andrei
+
+// In Interfaces, we cannot declare state variables and constructor
+interface BaseContract {
+
+    // variables cannot be declared in interfaces
+    // uint public x;
+    // address public owner;
+
+    // constructor() {
+    //     x = 100;
+    //     owner = msg.sender;
+    // }
+
+    // functions cannot have an implementation
+    // functions are external and implicitly virtual that means they can be overridden
+    function setX(uint _newX) external;
+}
+
+contract DerivedContract is BaseContract {
+    uint public y = 300;
+    uint public x;
+
+    function setX(uint _newX) public override {
+        x = _newX;
+    }
+}
