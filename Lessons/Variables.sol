@@ -3,13 +3,15 @@
 pragma solidity 0.8.10;
 
 contract Variables {
-    string public greet = "Hello Janta..."; // state variables
+    // state variables
+    string public greet = "Hello Janta..."; 
     uint public num = 123;
 
     function demoFunction() public view returns (address) {
-        //uint secondNumber = 200; // local variable
-        return msg.sender; // global variable
+        // local variable
+        // uint secondNumber = 200; 
+
+        // global variable
+        return msg.sender; 
     }
-
-
 }
